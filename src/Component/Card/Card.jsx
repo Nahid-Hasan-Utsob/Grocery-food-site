@@ -24,7 +24,9 @@ const Card = () => {
         {/* Text + Button */}
         <div className="flex flex-col justify-between flex-1">
           <div>
-            <p className="text-2xl font-bold text-zinc-800 mb-3">{card.title}</p>
+            <p className="text-2xl font-bold text-zinc-800 mb-3">
+              {card.title}
+            </p>
             <p className="text-base text-zinc-500 mb-6">{card.des}</p>
           </div>
           <Button btnContant="See All" />
@@ -38,7 +40,9 @@ const Card = () => {
       <Header HFText="Shop" HBText="By Category" />
 
       {/* Grid Layout */}
-      <section className="grid md:grid-cols-3 gap-10 mt-20">{randerCard}</section>
+      <section className="grid md:grid-cols-3 gap-10 mt-20">
+        {randerCard}
+      </section>
     </section>
   );
 };
