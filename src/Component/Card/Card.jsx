@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import FoodItems from "../../assets/fruits-and-veggies.png";
 import FoodItems2 from "../../assets/dairy-and-eggs.png";
 import FoodItems3 from "../../assets/meat-and-seafood.png";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   const randerCard = Category.map((card) => {
@@ -29,7 +30,7 @@ const Card = () => {
             </p>
             <p className="text-base text-zinc-500 mb-6">{card.des}</p>
           </div>
-          <Button btnContant="See All" />
+            <Link className='text-xl w-fit rounded-xl text-white bg-orange-400 px-7 py-4 hover:bg-orange-500 hover:scale-105 transition-all transform-300' to={card.path}>See All</Link>
         </div>
       </section>
     );
@@ -53,18 +54,21 @@ const Category = [
     title: "Fruits & Veggies",
     des: "Fresh, organic produce sourced daily from local farms. Explore a wide range of seasonal fruits and crisp vegetables",
     img: FoodItems,
+    path:'/frurits',
   },
   {
     id: 2,
     title: "Dairy & Eggs",
     des: "Wholesome dairy products and free-range eggs. From creamy milk and yogurt to artisanal cheeses",
     img: FoodItems2,
+      path:'/dairy',
   },
   {
     id: 3,
     title: "Meat & SeaFood",
     des: "High-quality, responsibly sourced meat and seafood. Choose from fresh cuts, marinated options, and more",
     img: FoodItems3,
+      path:'/meat',
   },
 ];
 
